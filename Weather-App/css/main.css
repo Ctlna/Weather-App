@@ -1,4 +1,21 @@
+body{
+    padding: 5px;
+    background-color: var(--background-1);
+}
 img{
     width: 1em;
     background-color: rgb(161, 161, 245);
+}
+#lugarYBusqueda, #FeelsLike, #BotonesDias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    width: 8em;
+    height: 3em;
+    border-color: transparent;
+    border-radius: 1em;
+    background-color: var(--button-2);
 }
