@@ -102,3 +102,19 @@ button{
 .icon{
     width: 33px;
 }
+.forecast-day {
+    background-color: var(--cajas);
+    width: 96%;
+    height: auto;
+    border-radius: 0.7em;
+    margin: 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.section-content {
+    display: none;
+}
+#Hoy {
+    display: block; /* Mostrar por defecto la sección de hoy */
+}

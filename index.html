@@ -25,14 +25,14 @@
                         </div>
     
                         <div id="BotonesDias">
-                            <button id="fetchWeatherBtn" onclick="fetchWeatherTodaay()">Today</button>
-                            <button>Tomorrow</button>
-                            <button>10 days</button>
+                            <button id="fetchWeatherBtn" onclick="showSection('Hoy'); fetchWeatherTodaay()">Today</button>
+                            <button onclick="showSection('Manana')">Tomorrow</button>
+                            <button onclick="showSection('10dias');fetchWeatherMuchos()">10 days</button>
                         </div>
                     </div>
                 </section>
             
-                <section id="Hoy">
+                <section id="Hoy" class="section-content">
                     <div id="datos">
                         <div class="viento">
                             <img class="chiquito" src="./storage/img/air.png">
@@ -78,9 +78,9 @@
                     </div>
                 </section>
                 
-                <section id="Manana">Mañana</section>
+                <section id="Manana" class="section-content">Mañana</section>
 
-                <section id="10dias" onclick="fetchWeatherMuchos()" > en 10 días</section>
+                <section id="10dias" class="section-content" >10 días</section>
             
             </div>
         </div>

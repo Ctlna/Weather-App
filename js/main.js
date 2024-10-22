@@ -20,6 +20,21 @@ window.addEventListener('scroll', function() {
     } 
 });
 
+function showSection(sectionId) {
+    // Oculta todas las secciones
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Muestra solo la sección que corresponde al id que recibimos
+    const activeSection = document.getElementById(sectionId);
+    if (activeSection) {
+        activeSection.style.display = 'block';
+    }
+}
+
+
 function fetchWeatherTodaay(){
     let xhr = new XMLHttpRequest();
     let apiKey = "5ef27643ffdb4f8cb79164409242110";
@@ -115,7 +130,7 @@ function wheatherHourly(data){
         twiligth.innerHTML=`<p>Error:${data.error}</p>`;
     }
     else{
-        let solecito = data.forecast.forecastday[0].astro;
+        let solecito = data.forecast.forecastday[0];
         let forecast = data.forecast.forecastday[0].hour; 
         let firstSixHours = forecast.slice(0, 24);
         let htmlContent = '';
@@ -135,13 +150,13 @@ function wheatherHourly(data){
                 <img class="chiquito" src="./storage/img/nights_stay.png">
                 <p>Sunrise
                 <br>
-                ${solecito.sunrise}</p>
+                ${solecito.astro.sunrise}</p>
             </div>
             <div class="anochecer">
                 <img class="chiquito" src="./storage/img/bounding_box.png">
                 <p>Sunset
                 <br>
-                ${solecito.sunset} </p>
+                ${solecito.astro.sunset} </p>
             </div>
         `
     }
@@ -159,10 +174,12 @@ function wheather10days(data){
         firstSixDates.forEach(day => {
             htmlContent += `
                 <div class="forecast-day">
-                    <p>${day.date}</p>
-                    <img src="${day.day.condition.icon}" alt="Weather Icon">
+                    <div class="izquierda">
+                        <p>${day.date}</p>
+                        <p>${day.day.condition.text}</p>
+                    </div>
                     <p>${day.day.avgtemp_c}°</p>
-                    <p>${day.day.condition.text}</p>
+                    <img src="${day.day.condition.icon}" alt="Weather Icon">
                 </div>
             `;
         });
