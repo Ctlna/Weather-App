@@ -23,7 +23,7 @@ body{
     background-color: var(--card-1);
     position: relative;
     left: -13px;
-    width: 103%;
+    width: 102%;
     padding: 9px;
     top: -13px;
 }
@@ -32,6 +32,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding: 6px;
 }
 button{
     width: 6.6em;
@@ -63,6 +64,7 @@ button{
     overflow: hidden;
     padding: 13px;
     background-color: var(--background-1);
+    overflow: auto;
 }
 #datos, #sol{
     display: flex;
@@ -85,6 +87,13 @@ button{
     border-radius: 0.7em;
     margin: 6px;
     margin-left: 5%;
+}
+.titulos, .contenido{
+    display: flex;
+    align-items: center;
+}
+.separa{
+    margin: 3%;
 }
 .amanecer, .anochecer{
     background-color:  var(--cajas);
