@@ -71,7 +71,7 @@ button{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.viento, .lluvia, .presion, .uv{
+.viento, .lluvia, .presion, .uv, .amanecer, .anochecer{
     background-color: var(--cajas);
     width: 40%;
     height: auto;
@@ -83,22 +83,22 @@ button{
 #hourly, #diagrama, #posibilidadLluvia {
     background-color: var(--cajas);
     width: 90%;
-    height: 6em;
+    height: auto;
     border-radius: 0.7em;
     margin: 6px;
     margin-left: 5%;
+    overflow: auto;
 }
-.titulos, .contenido{
+.titulos, #contenido{
     display: flex;
     align-items: center;
 }
 .separa{
-    margin: 3%;
+    margin-right: 5.6px;
+    margin-left: 5.6px;
+    margin-top: 0;
+    margin-bottom: 12px;
 }
-.amanecer, .anochecer{
-    background-color:  var(--cajas);
-    width: 40%;
-    height: 3em;
-    border-radius: 0.7em;
-    margin: 3px;
+.icon{
+    width: 33px;
 }
