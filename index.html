@@ -9,46 +9,66 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-
-    <section id="encabezado">
-        <div id="lugarYBusqueda">
-            <p>Ciudad, País</p>
-            <img src="./storage/img/search_black.png">
-        </div>
-        <div id="FeelsLike">
-            <p>Grados°</p>
-            <p>feels</p>
-            <img src="./storage/img/logo.png">
-        </div>
-        <div id="BotonesDias">
-            <button>Today</button>
-            <button>Tomorrow</button>
-            <button>10 days</button>
-        </div>
-    </section>
-
-    <section id="Hoy">
-        <div id="datos">
-            <div class="viento">d</div>
-            <div class="lluvia">f</div>
-            <div class="presion">f</div>
-            <div class="uv">f</div>
-        </div>
-        
-        <div id="hourly">f</div>
-        
-        <div id="diagrama">f</div>
+    <div class="phone-container">
+        <div class="phone">
+            <div class="screen">
+                <section id="encabezado">
+                    <div class="background-img">
+                        <div id="lugarYBusqueda">
+                            <p>Ciudad, País</p>
+                            <img src="./storage/img/search_black.png">
+                        </div>
+                        
+                        <div id="FeelsLike">
+                            <p>Grados°</p>
+                            <p>feels</p>
+                        </div>
     
-        <div id="posibilidadLluvia">f</div>
-    
-        <div id="sol">
-            <div class="amanecer">f</div>
-            <div class="anochecer">f</div>
+                        <div id="BotonesDias">
+                            <button id="fetchWeatherBtn" onclick="fetchWeatherTodaay()">Today</button>
+                            <button>Tomorrow</button>
+                            <button>10 days</button>
+                        </div>
+                    </div>
+                </section>
+            
+                <section id="Hoy">
+                    <div id="datos">
+                        <div class="viento">
+                            <img class="chiquito" src="./storage/img/air.png">
+                            <p>Wind speed</p>
+                        </div>
+                        <div class="lluvia">
+                            <img class="chiquito" src="./storage/img/rainy.png">
+                            <p>Rain chance</p>
+                        </div>
+                        <div class="presion">
+                            <img class="chiquito" src="./storage/img/waves.png">
+                            <p>Pressure</p>
+                        </div>
+                        <div class="uv">
+                            <img class="chiquito" src="./storage/img/light_mode.png">
+                            <p>UV Index</p>
+                        </div>
+                    </div>
+                    
+                    <div id="hourly">f</div>
+                    
+                    <div id="diagrama">f</div>
+                
+                    <div id="posibilidadLluvia">f</div>
+                
+                    <div id="sol">
+                        <div class="amanecer">f</div>
+                        <div class="anochecer">f</div>
+                    </div>
+                </section>
+                
+                <section id="10dias">f</section>
+            
+            </div>
         </div>
-    </section>
-    
-    <section id="10dias">f</section>
-
+    </div>
 </body>
-<script type="module" defer src="./js/main.js"></script>
+<script src="./js/main.js"></script>
 </html>

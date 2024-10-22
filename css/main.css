@@ -2,9 +2,30 @@ body{
     padding: 5px;
     background-color: var(--background-1);
 }
-img{
-    width: 1em;
-    background-color: rgb(161, 161, 245);
+.chiquito {
+    width: 2em;
+    height: 2em;
+    margin: 3px;
+}
+.background-img {
+    background-image: url(../storage/img/background.png);
+    background-size: cover;
+    background-position: center;
+    height: 294px;
+    width: 110%;
+    position: relative;
+    left: -13px;
+    top: -13px;
+    border-radius: 1em;
+    transition: opacity 0.3s ease-out;
+}
+#encabezado {
+    background-color: var(--card-1);
+    position: relative;
+    left: -13px;
+    width: 103%;
+    padding: 9px;
+    top: -13px;
 }
 #lugarYBusqueda, #FeelsLike, #BotonesDias{
     display: flex;
@@ -13,9 +34,62 @@ img{
     align-items: center;
 }
 button{
-    width: 8em;
-    height: 3em;
+    width: 6.6em;
+    height: 2.5em;
     border-color: transparent;
-    border-radius: 1em;
+    border-radius: 0.8em;
     background-color: var(--button-2);
+    font-size: 13px;
+}
+.phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.phone {
+    width: 300px;
+    height: 600px;
+    background-color: #333;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.screen {
+    width: 91%;
+    height: 95.4%;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 13px;
+    background-color: var(--background-1);
+}
+#datos, #sol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.viento, .lluvia, .presion, .uv{
+    background-color: var(--cajas);
+    width: 40%;
+    height: auto;
+    border-radius: 0.7em;
+    margin: 3px;
+    display: flex;
+    font-size: 14px;
+}
+#hourly, #diagrama, #posibilidadLluvia {
+    background-color: var(--cajas);
+    width: 90%;
+    height: 6em;
+    border-radius: 0.7em;
+    margin: 6px;
+    margin-left: 5%;
+}
+.amanecer, .anochecer{
+    background-color:  var(--cajas);
+    width: 40%;
+    height: 3em;
+    border-radius: 0.7em;
+    margin: 3px;
 }
